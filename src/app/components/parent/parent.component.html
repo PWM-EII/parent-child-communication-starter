@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+
+      <h5 class="card-title">Parent Component</h5>
+
+      <p class="card-text">
+        <strong>Data received from Child Component:</strong>
+        <br>
+
+        <br *ngIf="!receivedData">
+        <code>{{ receivedData | json }}</code>
+
+      </p>
+
+      <button class="btn btn-danger me-2"
+              (click)="transformChildData()">Transform Child Data</button>
+
+      <button class="btn btn-success "
+              (click)="restoreChildData()">Restore Child Data</button>
+
+      <app-child
+        [childName]="child1Name" [sharedData]='child1Data'
+        (dataEvent)="onReceiveDataFromChild($event)">
+
+      </app-child>
+
+      <app-child
+        [childName]="child2Name" [sharedData]='child2Data'
+        (dataEvent)="onReceiveDataFromChild($event)">
+
+      </app-child>
+
+
+    </div>
+  </div>
+</div>
