@@ -14,7 +14,7 @@ export class ChildComponent implements OnChanges {
 
 
   sendDataToParent() {
-     
+
   }
 
   ngOnChanges(changes: SimpleChanges): void {
