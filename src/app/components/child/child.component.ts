@@ -6,7 +6,7 @@ import {ChildData} from "../../models/child-data.model";
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnChanges {
+export class ChildComponent  {
 
   @Input() childName?: string;
   @Input() sharedData?: ChildData;
@@ -14,10 +14,6 @@ export class ChildComponent implements OnChanges {
 
 
   sendDataToParent() {
-
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
 
   }
 
